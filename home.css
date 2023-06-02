@@ -52,6 +52,35 @@ h1 {
   margin: 0;
 }
 
+#contact {
+  margin-top: 10em;
+}
+
+.special-paragraph {
+  margin-left: 5em;
+  margin-right: 50em;
+  margin-top: 2em;
+  text-align: justify;
+}
+
+#ProHS {
+  position: absolute;
+  top: 55em;
+  left: 50em;
+}
+
+.cool-paragraph {
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 2em;
+  text-align: justify;
+}
+
+p {
+  margin: 0;
+
+}
+
 section {
   padding: 80px 20px;
   text-align: center;
