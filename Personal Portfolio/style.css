@@ -8,3 +8,11 @@ body{
     background: #ffffff;
     color: #080808;
 }
+#header{
+width: 100%;
+height: 100vh;
+background-image: url(Personal Portfolio/IMG_0555 2.jpg);
+background-size: cover;
+background-position: center;
+
+}
