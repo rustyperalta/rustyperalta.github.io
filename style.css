@@ -285,6 +285,8 @@ nav .fas{
     #header{
         background-image: url(images/phone-background.jpg);
         background-size: cover;
+        margin: 0;
+        padding: 0;
     }
     .header-text{
         margin-top: 100%;
