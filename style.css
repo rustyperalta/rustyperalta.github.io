@@ -284,6 +284,7 @@ nav .fas{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phone-background.jpg);
+        background-size: cover;
     }
     .header-text{
         margin-top: 100%;
@@ -305,6 +306,7 @@ nav .fas{
         height: 100vh   ;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
