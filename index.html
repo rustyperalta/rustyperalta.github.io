@@ -38,8 +38,8 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>Rusty is the guy. Rusty tells no lie. Rusty can spit bars forever like PI. Going 3.14159
-                        always on the grind because he like to shine. Rusty P is beautiful, he is a dime times 10. That man is a
-                        dollar and can be your friend. Educated guy who may seem like a scholar. Do you not be fooled, he's
+                        always on the grind because he like to shine. Rusty is beautiful, he is a dime times 10. That man is a
+                        dollar and can be your friend. Educated guy who may seem like a scholar. Do not be fooled, he's
                         just a baller.</p>
 
                     <div class="tab-titles">
@@ -127,6 +127,7 @@
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -134,15 +135,6 @@
         <p> Copyright © Russell. Made with HTML & CSS</p>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
     <script>
@@ -173,11 +165,18 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzlQ6-P7jtTq_uVP5XZWJddVSaCCoJcOuVdWT7Vfg2u_VRYEvJTZbUHBy3M5qrwmfheyA/exec'
         const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
 
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
             .catch(error => console.error('Error!', error.message))
         })
       </script>
