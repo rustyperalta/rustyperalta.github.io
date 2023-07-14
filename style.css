@@ -347,6 +347,11 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+    button[type="submit"] {
+        color: #080808;
+        background-color: #4f150767;
+        border-color: #4f1507;
+    }
 }
 #msg{
     color: #0c6509;
