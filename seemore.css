@@ -1,20 +1,41 @@
-.options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+#portfolio {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .options a {
-    text-decoration: none;
-    color: #333;
+  .sub-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
   }
 
-  .options img {
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .option {
+    width: 200px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .option img {
     width: 100%;
     height: auto;
   }
 
-  .options h2 {
+  .option h2 {
     margin-top: 10px;
   }
