@@ -48,8 +48,9 @@ p{
     }
 
     .gallery img {
-        width: 150%; /* Set the width to a percentage to make it responsive */
-        height: auto; /* Allow the height to adjust proportionally */
+        width: 420px; /* Set the width to a percentage to make it responsive */
+        height: 420px; /* Allow the height to adjust proportionally */
+        object-fit: cover;
         padding: 10px; /* Increase the padding for better spacing */
     }
 }
