@@ -48,8 +48,8 @@ p{
     }
 
     .gallery img {
-        width: 400px;
-        height: 400px;
-        padding: 6px;
+        width: 90%; /* Set the width to a percentage to make it responsive */
+        height: auto; /* Allow the height to adjust proportionally */
+        padding: 10px; /* Increase the padding for better spacing */
     }
 }
