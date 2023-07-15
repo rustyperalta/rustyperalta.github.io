@@ -25,3 +25,16 @@ p{
     object-fit: cover;
     padding: 5px;
 }
+/* ---------------phone----------------- */
+
+@media only screen and (min-width: 600px) {
+    .gallery {
+      margin: 10px 50px;
+      justify-content: space-between;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+    }
+  }
