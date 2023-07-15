@@ -25,3 +25,31 @@ p{
     object-fit: cover;
     padding: 5px;
 }
+/* ---------------phone screen-------------------- */
+
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        margin: 20px 0 30px;
+        font-size: 24px;
+    }
+
+    p {
+        margin: 20px 0 30px;
+        font-size: 14px;
+    }
+
+    .gallery {
+        margin: 5px;
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 150px;
+        padding: 3px;
+    }
+}
