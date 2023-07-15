@@ -48,8 +48,8 @@ p{
     }
 
     .gallery img {
-        width: 150px;
-        height: 150px;
-        padding: 3px;
+        width: 400px;
+        height: 400px;
+        padding: 6px;
     }
 }
