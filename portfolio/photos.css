@@ -2,8 +2,6 @@ body {
     font-family: 'Verdana', verdana;
     background: #ffffff;
     color: #080808;
-    margin: 0;
-    box-sizing: border-box;
 }
 .container{
     padding: 10px 10%;
@@ -101,7 +99,7 @@ nav .fas{
         background:#4f1507;
         position: fixed;
         top: 0;
-        right: -200px;
+        right: -150px;
         width: 200px;
         height: 100vh   ;
         padding-top: 80px;
