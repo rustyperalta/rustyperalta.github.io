@@ -62,6 +62,15 @@ p span{
     object-fit: cover;
     padding: 5px;
 }
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:#272727;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #ffffff;
+}
 /* ---------------phone screen-------------------- */
 nav .fas{
     display: none;
