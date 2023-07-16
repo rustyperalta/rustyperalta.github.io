@@ -87,7 +87,7 @@ nav .fas{
     }
 
     .gallery img {
-        width: 90%; /* Set the width to a percentage to make it responsive */
+        width: 100%; /* Set the width to a percentage to make it responsive */
         height: auto; /* Allow the height to adjust proportionally */
         padding: 10px; /* Increase the padding for better spacing */
     }
