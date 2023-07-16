@@ -26,15 +26,17 @@ p{
     padding: 5px;
 }
 /* ---------------phone screen-------------------- */
+nav .fas{
+    display: none;
+}
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     body {
         font-size: 16px;
     }
-
-    h1 {
-        margin: 20px 0 30px;
-        font-size: 24px;
+    #header{
+        margin-top: 100%;
+        font-size: 16px;
     }
 
     p {
@@ -51,5 +53,30 @@ p{
         width: 90%; /* Set the width to a percentage to make it responsive */
         height: auto; /* Allow the height to adjust proportionally */
         padding: 10px; /* Increase the padding for better spacing */
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ffffff;
+        position: fixed;
+        top: 0;
+        right: -200;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
 }
