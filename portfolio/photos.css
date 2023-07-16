@@ -96,12 +96,12 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #000000;
+        background:#4f1507;
         position: fixed;
         top: 0;
-        right: -200;
+        right: -200px;
         width: 200px;
-        height: 100vh;
+        height: 100vh   ;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
