@@ -73,20 +73,21 @@ main {
   }
 
   .video-container {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* To position the video and description side by side */
+}
+
+iframe {
     flex-basis: 48%; /* Adjust this value to control the width of video containers */
-    margin-bottom: 20px;
-    position: relative;
-  }
-
-  iframe {
-    width: 100%;
     height: 315px;
-  }
+}
 
-  .video-description {
+.video-description {
+    flex-basis: 48%; /* Adjust this value to control the width of descriptions */
     background-color: #fff;
     padding: 10px;
-    width: 100%; /* Update: Set the width to 100% */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -98,8 +99,9 @@ main {
 .video-description p {
     font-size: 14px;
     color: #666;
+    text-align: left; /* Align the text to the left within its box */
+    margin: 20px 0;
 }
-
 
 /* -------------------------phone optimization--------------------- */
 @media (max-width: 600px) {
@@ -208,5 +210,12 @@ main {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    .video-container {
+        flex-direction: column; /* Stack video and description on top of each other */
+    }
+
+    iframe {
+        height: 200px;
     }
 }
