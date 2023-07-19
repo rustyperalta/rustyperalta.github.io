@@ -18,9 +18,9 @@
                 <li><a href="https://rustyperalta.github.io/index.html#about">About</a></li>
                 <li><a href="https://rustyperalta.github.io/index.html#portfolio">Portfolio</a></li>
                 <li><a href="https://rustyperalta.github.io/index.html#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu(event)"></i>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu(event)"></i>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
             <p><span>VIDEOS: </span>Films & Video Edits I've made</p>
         </div>
@@ -64,18 +64,17 @@
 
       </script>
      <script>
-      function openmenu(event) {
-    event.stopPropagation();
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
     var sidemenu = document.getElementById("sidemenu");
     sidemenu.style.right = "0";
 }
 
-function closemenu(event) {
-    event.stopPropagation();
+function closemenu() {
     var sidemenu = document.getElementById("sidemenu");
     sidemenu.style.right = "-200px";
 }
-
   </script>
     </main>
     <footer>
