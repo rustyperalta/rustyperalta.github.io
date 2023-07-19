@@ -211,11 +211,5 @@ iframe {
         left: 25px;
         cursor: pointer;
     }
-    .video-container {
-        flex-direction: column; /* Stack video and description on top of each other */
-    }
 
-    iframe {
-        height: 200px;
-    }
 }
