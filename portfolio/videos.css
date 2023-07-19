@@ -218,6 +218,7 @@ iframe {
     .video-description {
         position: static;
         width: 90%;
+        max-width: 500px; /* Set a maximum width for the text box to avoid excessive width on large screens */
         margin-top: 20px; /* Add margin to create space between video and description */
     }
 
