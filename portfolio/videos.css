@@ -217,7 +217,7 @@ iframe {
 
     .video-description {
         position: static;
-        width: 100%;
+        width: 90%;
         margin-top: 20px; /* Add margin to create space between video and description */
     }
 
