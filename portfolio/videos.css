@@ -217,9 +217,9 @@ iframe {
 
     .video-description {
         position: static;
-        width: 90%;
-        max-width: 500px; /* Set a maximum width for the text box to avoid excessive width on large screens */
+        width: 90%; /* Adjust width to make the text box wider on the phone */
         margin-top: 20px; /* Add margin to create space between video and description */
+        left: 5%;  /* Add margin to create space between video and description */
     }
 
     iframe {
