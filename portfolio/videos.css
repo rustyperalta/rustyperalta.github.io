@@ -160,7 +160,7 @@ iframe {
         background: #4f1507;
         position: fixed;
         top: 0;
-        right: -250px;
+        right: 0px;
         width: 200px;
         height: 100vh;
         padding-top: 80px;
