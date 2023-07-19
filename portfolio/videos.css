@@ -84,25 +84,22 @@ main {
   }
 
   .video-description {
-    position: absolute;
-    top: 0;
-    left: 55%; /* Adjust this value to move the description box further to the right */
-    transform: translateX(50%); /* Center the description box horizontally */
     background-color: #fff;
     padding: 10px;
-    width: 90%; /* Adjust this value to control the width of descriptions */
+    width: 100%; /* Update: Set the width to 100% */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .video-description h3 {
+.video-description h3 {
     font-size: 18px;
     margin-bottom: 5px;
-  }
+}
 
-  .video-description p {
+.video-description p {
     font-size: 14px;
     color: #666;
-  }
+}
+
 
 /* -------------------------phone optimization--------------------- */
 @media (max-width: 600px) {
