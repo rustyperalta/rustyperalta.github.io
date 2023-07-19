@@ -151,26 +151,30 @@ iframe {
         padding: 10px;
     }
 
-    nav .fas {
+   nav .fas{
         display: block;
         font-size: 25px;
     }
-
-    nav ul {
-        background: #4f1507;
+    nav ul{
+        background:#4f1507;
         position: fixed;
         top: 0;
-        right: -250px;
+        right: -200px;
         width: 200px;
-        height: 100vh;
-        padding-top: 80px;
+        height: 100vh   ;
+        padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
     }
-
-    nav ul li {
+    nav ul li{
         display: block;
         margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
     }
 
     nav ul .fas {
