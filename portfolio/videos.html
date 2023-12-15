@@ -25,7 +25,7 @@
             <p><span>VIDEOS: </span>Films & Video Edits I've made</p>
         </div>
     </div>
-    <main>
+    <main style="padding-top: 30px;">
         <div class="video-container">
             <iframe width="100%" height="200px" src="https://www.youtube.com/embed/yzSHY3fQWjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="video-description">
@@ -75,45 +75,41 @@
                 <p>Nate and Rusty introduce the 2018 Clayton Valley Winter Rally.</p>
             </div>
         </div>
+    </div>
+    <div class="copyright">
+      <p> Copyright © Russell. Made with HTML & CSS</p>
+    </div>
+    </div>
+
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+          for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+      }
 
 
 
 
-        <script>
-           var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-
-
-
-      </script>
-     <script>
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-    var sidemenu = document.getElementById("sidemenu");
-    sidemenu.style.right = "0";
-}
-
-function closemenu() {
-    var sidemenu = document.getElementById("sidemenu");
-    sidemenu.style.right = "-200px";
-}
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu")
+      function openmenu(){
+          sidemenu.style.right ="0";
+      }
+      function closemenu(){
+          sidemenu.style.right ="-200px";
+      }
   </script>
     </main>
-    <footer>
-        <p>Copyright © Russell. Made with HTML & CSS</p>
-    </footer>
 </body>
 </html>
