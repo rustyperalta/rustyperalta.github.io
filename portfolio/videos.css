@@ -110,9 +110,7 @@ iframe {
 }
 
 /* -------------------------phone optimization--------------------- */
-nav .fas{
-    display: none;
-}
+
 
 @media (max-width: 600px) {
     body {
