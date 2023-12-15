@@ -54,14 +54,13 @@ nav ul li a:hover::after{
 
 p{
     text-align: center;
-    margin: 30px 0 50px;
 }
 p span{
     font-weight: 700;
 }
 
 .gallery {
-    margin: 10px 50px;
+    margin: 30px 0 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
