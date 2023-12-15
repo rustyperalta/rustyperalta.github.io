@@ -181,4 +181,10 @@ iframe {
         left: 25px;
         cursor: pointer;
     }
+    nav ul li a{
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+    }
 }
