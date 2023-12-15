@@ -156,7 +156,6 @@ iframe {
         width: 100%; /* Make the video take the full width of its container */
         height: 200px; /* Adjust the height as needed */
     }
-     }
     nav .fas{
         display: block;
         font-size: 25px;
@@ -182,3 +181,4 @@ iframe {
         left: 25px;
         cursor: pointer;
     }
+}
