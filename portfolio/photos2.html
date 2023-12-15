@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusty's Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo2.png">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>STUDENT</h1>
+                <p>in Constant Evolution</p>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------about----------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Rusty is the guy. Rusty tells no lie. Rusty can spit bars forever like PI. Going 3.14159
+                        always on the grind because he like to shine. Rusty is beautiful, he is a dime times 10. That man is a
+                        dollar and can be your friend. Educated guy who may seem like a scholar. Do not be fooled, he's
+                        just a baller.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" data-tab="skills">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" data-tab="experience">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" data-tab="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab"id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                            <li><span>Storytelling</span><br>Pushing the boundaries of various artistic mediums</li>
+                            <li><span>Project Management</span><br>Identifies valuable objectives with strategic planning for optimal execution</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>Uncle Content Marketing Manager & Founder</li>
+                            <li><span>2022 - 2023</span><br>Growth Marketing Intern/Associate at GIG Car Share AAA</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"id="education">
+                        <ul>
+                            <li><span>2023</span><br>Data Analytics Professional Certification from Google Coursera</li>
+                            <li><span>2022</span><br>Bachelor's of Science from Saint Mary's College of California</li>
+                            <li><span>2018</span><br>Diploma from Clayton Valley Charter High School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------portfolio---------------- -->
+    <div id="portfolio" style="padding-bottom: 0px;">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work2.jpg">
+                    <div class="layer">
+                        <h3>Photos</h3>
+                        <p>Moments captured from core memories</p>
+                        <a href="portfolio/photos.html"><i class="fas fa-external-link-alt"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                    <div class="layer">
+                        <h3>Videos</h3>
+                        <p>Films I've made over the years</p>
+                        <a href="portfolio/videos.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work1.jpg">
+                    <div class="layer">
+                        <h3>Articles</h3>
+                        <p>Burning thoughts that the world should know</p>
+                        <a href="portfolio/articles.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"class="btn">Click 4 Surprise</a> <!-- ------------- Request Services ------------ -->
+            <div id="contact">
+        </div>
+    </div>
+<!-- -----------------contact----------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/rusty.peralta.3/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/rustyperalta3/"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/rusty.peralta/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/russell-peralta21/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright © Russell. Made with HTML & CSS</p>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzlQ6-P7jtTq_uVP5XZWJddVSaCCoJcOuVdWT7Vfg2u_VRYEvJTZbUHBy3M5qrwmfheyA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
