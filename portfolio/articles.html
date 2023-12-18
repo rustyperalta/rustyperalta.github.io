@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
-    <link rel="stylesheet" type="text/css" href="articles.css">
+    <link rel="stylesheet" type="text/css" href="videos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="port-photos/logo2.png">
 </head>
@@ -12,53 +12,69 @@
     <div id="header">
         <div class="container">
           <nav>
-            <img src="port-photos/logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="https://rustyperalta.github.io/index.html">Home</a></li>
-                <li><a href="https://rustyperalta.github.io/index.html#about">About</a></li>
-                <li><a href="https://rustyperalta.github.io/index.html#portfolio">Portfolio</a></li>
-                <li><a href="https://rustyperalta.github.io/index.html#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-            <p><span>ARTICLES: </span>Thoughts, Stories, and Experiences</p>
+        <img src="port-photos/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="https://rustyperalta.github.io/index.html">Home</a></li>
+            <li><a href="https://rustyperalta.github.io/index.html#about">About</a></li>
+            <li><a href="https://rustyperalta.github.io/index.html#portfolio">Portfolio</a></li>
+            <li><a href="https://rustyperalta.github.io/index.html#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+     </nav>
+            <p><span>VIDEOS: </span>Films & Video Edits I've made</p>
         </div>
     </div>
-    <main>
-        <div class="blog-container">
-            <img src="port-photos/article1.jpg" alt="Image 1">
-            <h3>Screens (BASS: Best Storytelling Award)</h3>
-            <p>Oftentimes, people think the dangers of technology consist of killer-robot cliches that take over the world, but the real danger is the advancement of technology in our media, having the potential to manipulate people against each other.</p>
-            <a href="link-to-blog-post1.html" class="read-more">Read more</a>
+    <main style="padding-top: 30px;">
+        <div class="video-container">
+            <img style="width: 333px;" src="port-photos/article1.jpg">
+            <div class="video-description">
+                <h3>Russell P. Bars</h3>
+                <p>Definitely trust this "cooking lesson" from the world-renowned Chef: Rusty P. Learn how you can make the most out of your Steak with ONLY salt and pepper. Grab your meats and let's go!</p>
+            </div>
         </div>
-        <div class="blog-container">
-            <img src="path-to-image2.jpg" alt="Image 2">
-            <h3>She's Crazy</h3>
-            <p>When you're in a real horror movie, you need to make smart choices. Trying to get some alone time, Rusty's night of studying becomes a night of survival by any means necessary.</p>
-            <a href="link-to-blog-post2.html" class="read-more">Read more</a>
+        <div class="video-container">
+            <img style="width: 333px;"img src="port-photos/article2.jpg" alt="Article Image" frameborder="0" ></iframe>
+            <div class="video-description">
+                <h3>How to make a Steak</h3>
+                <p>Definitely trust this "cooking lesson" from the world-renowned Chef: Rusty P. Learn how you can make the most out of your Steak with ONLY salt and pepper. Grab your meats and let's go!</p>
+            </div>
         </div>
-        <div class="blog-container">
-            <img src="path-to-image3.jpg" alt="Image 3">
-            <h3>How to make a Steak</h3>
-            <p>Definitely trust this "cooking lesson" from the world-renowned Chef: Rusty P. Learn how you can make the most out of your Steak with ONLY salt and pepper. Grab your meats and let's go!</p>
-            <a href="link-to-blog-post3.html" class="read-more">Read more</a>
-        </div>
-    </main>
-    <footer>
-        <p>Copyright © Russell. Made with HTML & CSS</p>
-    </footer>
+    </div>
+    <div class="copyright">
+      <p> Copyright © Russell. Made with HTML & CSS</p>
+    </div>
+    </div>
+
 
     <script>
-        var sidemenu = document.getElementById("sidemenu");
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
+      function opentab(tabname){
+          for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+      }
 
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+
+
+
     </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu")
+      function openmenu(){
+          sidemenu.style.right ="0";
+      }
+      function closemenu(){
+          sidemenu.style.right ="-200px";
+      }
+  </script>
+    </main>
 </body>
 </html>
