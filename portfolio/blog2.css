@@ -149,7 +149,7 @@ iframe {
         padding: 10px;
     }
 
-    .video-container {
+    .blog-container {
         flex-basis: 100%;
         margin-bottom: 20px;
         position: relative;
@@ -157,7 +157,7 @@ iframe {
         justify-content: center; /* Center videos horizontally */
     }
 
-    .video-description {
+    .blog-description {
         flex-basis: 90%; /* Adjust this value to control the width of descriptions on phone */
         background-color: #fff;
         padding: 10px;
