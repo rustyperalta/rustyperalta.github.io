@@ -120,6 +120,10 @@ iframe {
     color: #080808;
     transition: background 0.5s;
 }
+.blog-container img {
+    height: 500px;
+    width: 500px;
+}
 
 /* -------------------------phone optimization--------------------- */
 
@@ -162,6 +166,10 @@ iframe {
         background-color: #fff;
         padding: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .blog-container img {
+        height: 300px;
+        width: 300px;
     }
 
     iframe {
