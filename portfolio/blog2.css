@@ -54,6 +54,10 @@ nav ul li a:hover::after{
 .blog-container {
     margin: 1rem;
 }
+.blog-container img {
+    height: 500px;
+    width: 500px;
+}
 
 p{
     text-align: center;
@@ -120,10 +124,7 @@ iframe {
     color: #080808;
     transition: background 0.5s;
 }
-.blog-container img {
-    height: 500px;
-    width: 500px;
-}
+
 /* -------------------------phone optimization--------------------- */
 
 
@@ -170,7 +171,6 @@ iframe {
         height: 300px;
         width: 300px;
     }
-
     iframe {
         width: 100%; /* Make the video take the full width of its container */
         height: 200px; /* Adjust the height as needed */
