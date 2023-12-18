@@ -361,6 +361,9 @@ nav .fas{
         font-size: 18px;
         position: relative;
     }
+    .logo {
+        width: 140px;
+    }
 }
 #msg{
     color: #0c6509;
