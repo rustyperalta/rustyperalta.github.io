@@ -16,12 +16,14 @@ body {
 
 .container{
     padding: 10px 10%;
+    margin-bottom: 30px;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .logo{
     width: 140px;
@@ -97,7 +99,6 @@ nav .fas{
     }
 
     p {
-        margin: 20px 0 30px;
         font-size: 14px;
     }
 
