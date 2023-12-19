@@ -76,6 +76,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* To position the video and description side by side */
+    padding-top: 30px;
+
 }
 
 iframe {
@@ -144,6 +146,8 @@ iframe {
         position: relative;
         display: flex;
         justify-content: center; /* Center videos horizontally */
+        padding-top: 30px;
+
     }
 
     .video-description {
