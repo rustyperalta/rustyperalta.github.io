@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', verdana;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #080808;
+}
+
+.container{
+    padding: 10px 10%;
+    margin-bottom: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #4f1507;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.blog-container {
+    margin: 1rem;
+}
+.blog-container img {
+    height: 500px;
+    width: 500px;
+}
+
+p{
+    text-align: center;
+}
+p span{
+    font-weight: 700;
+}
+nav .fas{
+    display: none;
+}
+main {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .blog-container {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* To position the video and description side by side */
+}
+
+iframe {
+    flex-basis: 48%; /* Adjust this value to control the width of video containers */
+    height: 315px;
+}
+
+.blog-description {
+    flex-basis: 48%; /* Adjust this value to control the width of descriptions */
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-description h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.blog-description p {
+    font-size: 14px;
+    color: #666;
+    text-align: left; /* Align the text to the left within its box */
+    margin: 20px 0;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:#272727;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #ffffff;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #4f1507;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #080808;
+    transition: background 0.5s;
+}
+
+/* -------------------------phone optimization--------------------- */
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    #header{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .gallery {
+        margin: 5px;
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .blog-container {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center; /* Center videos horizontally */
+    }
+
+    .blog-description {
+        flex-basis: 90%; /* Adjust this value to control the width of descriptions on phone */
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .blog-container img {
+        height: 300px;
+        width: 300px;
+    }
+    iframe {
+        width: 100%; /* Make the video take the full width of its container */
+        height: 200px; /* Adjust the height as needed */
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background:#4f1507;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 200px;
+        height: 100vh   ;
+        padding-top: 80px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul li a{
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+    }
+}
