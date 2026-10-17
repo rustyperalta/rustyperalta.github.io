@@ -1,210 +1,447 @@
+/* =========================================================
+   RUSSELL PERALTA — RUSSELL P. BARS
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Verdana', verdana;
     box-sizing: border-box;
 }
+
+:root {
+    --black: #080808;
+    --soft-black: #101010;
+    --charcoal: #181818;
+    --rust: #b43a20;
+    --rust-light: #d04a29;
+    --white: #f1eee9;
+    --muted: #9b9894;
+    --border: #292929;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: #ffffff;
-    color: #080808;
+    background: var(--black);
+    color: var(--white);
+    font-family: Verdana, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-.container{
-    padding: 10px 10%;
-    margin-bottom: 20px;
+.container {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 0 7%;
 }
-nav{
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+#header {
+    background: var(--black);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 10;
 }
-.logo{
-    width: 140px;
+
+.logo {
+    width: 135px;
+    display: block;
 }
-nav ul li{
-    display: inline-block;
+
+nav ul {
+    display: flex;
+    align-items: center;
     list-style: none;
-    margin: 10px 20px;
 }
-nav ul li a{
-    color: #080808;
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: var(--white);
     text-decoration: none;
-    font-size: 18px;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
     position: relative;
 }
-nav ul li a::after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #4f1507;
+
+nav ul li a::after {
+    content: "";
+
     position: absolute;
     left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    bottom: -7px;
 
+    width: 0;
+    height: 1px;
+
+    background: var(--rust-light);
+
+    transition: width 0.3s ease;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
 
-.blog-container {
-    margin: 1rem;
-}
-.blog-container img {
-    height: 500px;
-    width: 500px;
-}
-
-p{
-    text-align: center;
-}
-p span{
-    font-weight: 700;
-}
-nav .fas{
+nav .fas {
     display: none;
 }
-main {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  .blog-container {
-    margin: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* To position the video and description side by side */
+
+/* =========================================================
+   ARTICLE
+   ========================================================= */
+
+.article {
+    min-height: calc(100vh - 100px);
+
+    padding: 90px 0 130px;
+
+    background: var(--black);
 }
 
-iframe {
-    flex-basis: 48%; /* Adjust this value to control the width of video containers */
-    height: 315px;
+
+/* =========================================================
+   ARTICLE HEADING
+   ========================================================= */
+
+.article-heading {
+    max-width: 1100px;
+
+    padding-bottom: 45px;
+    margin-bottom: 65px;
+
+    border-bottom: 1px solid var(--border);
 }
+
+.eyebrow {
+    color: var(--rust-light);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.article-heading h1 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(55px, 8vw, 115px);
+    font-weight: 900;
+
+    line-height: 0.9;
+    letter-spacing: -6px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.article-heading h1 span {
+    color: var(--rust);
+}
+
+.article-date {
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE CONTENT
+   ========================================================= */
+
+.blog-container {
+    display: grid;
+
+    grid-template-columns: minmax(280px, 400px) minmax(0, 620px);
+
+    gap: clamp(50px, 7vw, 100px);
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.blog-image {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--charcoal);
+}
+
+.blog-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   WRITING
+   ========================================================= */
 
 .blog-description {
-    flex-basis: 48%; /* Adjust this value to control the width of descriptions */
-    background-color: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.blog-description h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
+    padding-top: 3px;
 }
 
 .blog-description p {
-    font-size: 14px;
-    color: #666;
-    text-align: left; /* Align the text to the left within its box */
-    margin: 20px 0;
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(18px, 1.6vw, 21px);
+    font-weight: 500;
+
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+
+    margin-bottom: 24px;
 }
-.copyright{
+
+.blog-description p:first-child {
+    color: var(--rust-light);
+
+    font-size: clamp(21px, 2vw, 26px);
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    margin-bottom: 28px;
+}
+
+.blog-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.copyright {
     width: 100%;
+
+    padding: 30px 7%;
+
+    background: var(--soft-black);
+
+    border-top: 1px solid var(--border);
+
+    color: #666;
+
     text-align: center;
-    padding: 25px 0;
-    background:#272727;
-    font-weight: 300;
-    margin-top: 20px;
-    color: #ffffff;
-}
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #4f1507;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #080808;
-    transition: background 0.5s;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
 }
 
-/* -------------------------phone optimization--------------------- */
 
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-@media (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    #header{
-        margin-top: 30px;
-        font-size: 16px;
-    }
+@media only screen and (max-width: 900px) {
 
-    p {
-        font-size: 14px;
+    .container {
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    .gallery {
-        margin: 5px;
-        justify-content: center;
+    .article {
+        padding: 75px 0 100px;
     }
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        padding: 10px;
+    .article-heading h1 {
+        letter-spacing: -4px;
     }
 
     .blog-container {
-        flex-basis: 100%;
+        grid-template-columns: minmax(240px, 330px) minmax(0, 1fr);
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+
+    /* ---------- Navigation ---------- */
+
+    nav {
+        height: 80px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    nav .fas {
+        display: block;
+
+        color: var(--white);
+
+        font-size: 22px;
+
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+        right: -200px;
+
+        width: 200px;
+        height: 100vh;
+
+        padding-top: 80px;
+
+        background: var(--rust);
+
+        z-index: 20;
+
+        transition: right 0.4s ease;
+    }
+
+    nav ul li {
+        display: block;
+
+        margin: 30px;
+    }
+
+    nav ul li a {
+        color: var(--white);
+
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+
+        top: 28px;
+        left: 28px;
+    }
+
+
+    /* ---------- Article ---------- */
+
+    .article {
+        min-height: auto;
+
+        padding: 65px 0 90px;
+    }
+
+    .article-heading {
+        padding-bottom: 35px;
+        margin-bottom: 45px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+
+        letter-spacing: 2.2px;
+
         margin-bottom: 20px;
-        position: relative;
-        display: flex;
-        justify-content: center; /* Center videos horizontally */
+    }
+
+    .article-heading h1 {
+        font-size: clamp(50px, 16vw, 75px);
+
+        line-height: 0.88;
+        letter-spacing: -4px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .blog-container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .blog-image {
+        width: min(100%, 380px);
     }
 
     .blog-description {
-        flex-basis: 90%; /* Adjust this value to control the width of descriptions on phone */
-        background-color: #fff;
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding-top: 0;
     }
-    .blog-container img {
-        height: 300px;
-        width: 300px;
-    }
-    iframe {
-        width: 100%; /* Make the video take the full width of its container */
-        height: 200px; /* Adjust the height as needed */
-    }
-    nav .fas{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background:#4f1507;
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 200px;
-        height: 100vh   ;
-        padding-top: 80px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    nav ul li a{
-        color: #ffffff;
-        text-decoration: none;
+
+    .blog-description p {
         font-size: 18px;
-        position: relative;
+
+        line-height: 1.6;
+
+        margin-bottom: 21px;
     }
+
+    .blog-description p:first-child {
+        font-size: 21px;
+
+        margin-bottom: 24px;
+    }
+
+
+    /* ---------- Footer ---------- */
+
+    .copyright {
+        font-size: 8px;
+    }
+
 }

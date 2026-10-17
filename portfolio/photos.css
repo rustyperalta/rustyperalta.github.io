@@ -1,8 +1,22 @@
+/* =========================================================
+   RUSSELL PERALTA — PHOTOGRAPHY
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Verdana', verdana;
     box-sizing: border-box;
+}
+
+:root {
+    --black: #080808;
+    --soft-black: #101010;
+    --charcoal: #181818;
+    --rust: #b43a20;
+    --rust-light: #d04a29;
+    --white: #f1eee9;
+    --muted: #9b9894;
+    --border: #292929;
 }
 
 html {
@@ -10,137 +24,486 @@ html {
 }
 
 body {
-    background: #ffffff;
-    color: #080808;
+    background: var(--black);
+    color: var(--white);
+    font-family: Verdana, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-.container{
-    padding: 10px 10%;
-    margin-bottom: 30px;
+.container {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 0 7%;
 }
-nav{
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 10;
 }
-.logo{
-    width: 140px;
+
+.logo {
+    width: 135px;
+    display: block;
 }
-nav ul li{
-    display: inline-block;
+
+nav ul {
+    display: flex;
+    align-items: center;
     list-style: none;
-    margin: 10px 20px;
 }
-nav ul li a{
-    color: #080808;
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: var(--white);
     text-decoration: none;
-    font-size: 18px;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
     position: relative;
 }
-nav ul li a::after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #4f1507;
+
+nav ul li a::after {
+    content: "";
+
     position: absolute;
     left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    bottom: -7px;
 
+    width: 0;
+    height: 1px;
+
+    background: var(--rust-light);
+
+    transition: width 0.3s ease;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
 
-p{
-    text-align: center;
-}
-p span{
-    font-weight: 700;
-}
-
-.gallery {
-    margin: 30px 0 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.gallery img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    padding: 5px;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background:#272727;
-    font-weight: 300;
-    margin-top: 20px;
-    color: #ffffff;
-}
-
-/* ---------------phone screen-------------------- */
-nav .fas{
+nav .fas {
     display: none;
 }
 
-@media (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    #header{
-        margin-top: 30px;
-        font-size: 16px;
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+#header {
+    min-height: 78vh;
+
+    background: var(--black);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.page-intro {
+    min-height: calc(78vh - 100px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px 0 90px;
+}
+
+.eyebrow {
+    color: var(--rust-light);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+}
+
+.page-intro h1 {
+    max-width: 1100px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(70px, 10vw, 145px);
+    font-weight: 900;
+
+    line-height: 0.82;
+    letter-spacing: -7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 45px;
+}
+
+.page-intro h1 span {
+    color: var(--rust);
+}
+
+.page-description {
+    max-width: 580px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+}
+
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+.scroll-indicator span:last-child {
+    color: var(--rust-light);
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PHOTOGRAPHY SECTION
+   ========================================================= */
+
+#photography {
+    padding: 120px 0 140px;
+    background: var(--black);
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 45px;
+    margin-bottom: 50px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.gallery-heading .eyebrow {
+    margin-bottom: 0;
+}
+
+.gallery-heading h2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(38px, 5vw, 70px);
+    font-weight: 900;
+
+    letter-spacing: -3px;
+    line-height: 0.9;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+/*
+   Columns preserve the photographs' natural proportions
+   instead of cropping everything into identical squares.
+*/
+
+.gallery {
+    columns: 3;
+    column-gap: 16px;
+}
+
+.gallery a {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+
+    break-inside: avoid;
+
+    background: var(--charcoal);
+}
+
+.gallery img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: initial;
+
+    padding: 0;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.gallery a:hover img {
+    transform: scale(1.015);
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+/*
+   Keeps the third-party Lightbox visually closer
+   to the rest of the portfolio.
+*/
+
+.lb-data .lb-caption {
+    font-family: Verdana, Arial, sans-serif;
+    color: var(--white);
+}
+
+.lb-data .lb-number {
+    color: var(--muted);
+}
+
+.lb-outerContainer {
+    background: var(--black);
+    border-radius: 0;
+}
+
+.lightbox .lb-image {
+    border: none;
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.copyright {
+    width: 100%;
+
+    padding: 30px 7%;
+
+    background: var(--soft-black);
+
+    border-top: 1px solid var(--border);
+
+    color: #666;
+
+    text-align: center;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media only screen and (max-width: 900px) {
+
+    .container {
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    p {
-        font-size: 14px;
+    .page-intro h1 {
+        letter-spacing: -5px;
     }
 
     .gallery {
-        margin: 5px;
-        justify-content: center;
+        columns: 2;
+    }
+
+    .gallery-heading {
+        display: block;
+    }
+
+    .gallery-heading .eyebrow {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+
+    /* ---------- Navigation ---------- */
+
+    nav {
+        height: 80px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    nav .fas {
+        display: block;
+
+        color: var(--white);
+
+        font-size: 22px;
+
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+        right: -200px;
+
+        width: 200px;
+        height: 100vh;
+
+        padding-top: 80px;
+
+        background: var(--rust);
+
+        z-index: 20;
+
+        transition: right 0.4s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px;
+    }
+
+    nav ul li a {
+        color: var(--white);
+
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+
+        top: 28px;
+        left: 28px;
+    }
+
+
+    /* ---------- Page Intro ---------- */
+
+    #header {
+        min-height: 75svh;
+    }
+
+    .page-intro {
+        min-height: calc(75svh - 80px);
+
+        padding: 60px 0 70px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .page-intro h1 {
+        font-size: clamp(52px, 17vw, 80px);
+
+        line-height: 0.86;
+        letter-spacing: -4px;
+
+        margin-bottom: 35px;
+    }
+
+    .page-description {
+        max-width: 90%;
+
+        font-size: 13px;
+        line-height: 1.7;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* ---------- Photography ---------- */
+
+    #photography {
+        padding: 80px 0 90px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+
+    /* ---------- Gallery ---------- */
+
+    .gallery {
+        columns: 1;
+        column-gap: 0;
+    }
+
+    .gallery a {
+        margin-bottom: 12px;
     }
 
     .gallery img {
-        width: 100%; /* Set the width to a percentage to make it responsive */
-        height: auto; /* Allow the height to adjust proportionally */
-        padding: 10px; /* Increase the padding for better spacing */
+        width: 100%;
+        height: auto;
     }
-    nav .fas{
-        display: block;
-        font-size: 25px;
+
+
+    /* ---------- Footer ---------- */
+
+    .copyright {
+        font-size: 8px;
     }
-    nav ul{
-        background:#4f1507;
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 200px;
-        height: 100vh   ;
-        padding-top: 80px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    nav ul li a{
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 18px;
-        position: relative;
-    }
+
 }
